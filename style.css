@@ -228,16 +228,18 @@ h3
     justify-content: center;
 }
 
-.spin-scenery 
+.circle
 {
-    width:80vw;
-    height:80vw;
-    border:10px solid white;
-    border-radius:100%;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    border: 8px solid white;
+    padding: 0;
+display:flex;
+align-items: center;
+justify-content: center;
+    width: 80vw;
+    height: 80vw;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 
@@ -265,121 +267,54 @@ h3
     position:absolute;
     width:60%;
     height:60%;
-    transform:rotate(45deg);
+   z-index:1000;
+   transform:rotate(45deg);
 }
 
-.bottle-spin-animation-class 
+.polygon 
 {
-    animation:rotate 3s ease-out;
-    animation-iteration-count: 1;
+    overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+  display:none;
 }
 
-@keyframes rotate 
-{
-    0%{transform: rotate(0deg);}
-    100%{transform:rotate(698deg);}
-}
-
-.red 
-{
-    width:40%;
-    height:50%;
-    position:absolute;
+.polygon:nth-of-type(1) {
+    /* transform: rotate(0deg) skewY(-0deg); */
     background:red;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    bottom:0;
-}
-.orange
-{
-    width:40%;
-    height:50%;
-    position:absolute;
+    /* display:flex; */
+  }
+  .polygon:nth-of-type(2) {
+    /* transform: rotate(180deg) skewY(-180deg); */
     background:orange;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(180deg);
-    top:0;
-}
-.yellow
-{
-    width:40%;
-    height:50%;
-    position:absolute;
-    background:yellow;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(90deg);
-    left:4vw;
-}
-.blue
-{
-    width:40%;
-    height:50%;
-    position:absolute;
+    /* display:flex; */
+  }
+  .polygon:nth-of-type(3) {
+    /* transform: rotate(90deg) skewY(-45deg); */
     background:blue;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(-90deg);
-    right:4vw;
-}
-
-.pink
-{
-    width:40%;
-    height:50%;
-    position:absolute;
-    background:pink;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(-45deg);
-    right:10vw;
-    bottom:6vw;
-}
-
-.green
-{
-    width:40%;
-    height:50%;
-    position:absolute;
-    background:green;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(45deg);
-    left:10vw;
-    bottom:6vw;
-}
-
-.purple
-{
-    width:40%;
-    height:50%;
-    position:absolute;
+  }
+  .polygon:nth-of-type(4) {
+    /* transform: rotate(135deg) skewY(-45deg); */
+    background:yellow;
+  }
+  .polygon:nth-of-type(5) {
+    /* transform: rotate(180deg) skewY(-45deg); */
     background:purple;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(135deg);
-    left:10vw;
-    top:6vw;
-}
-
-.cyan
-{
-    width:40%;
-    height:50%;
-    position:absolute;
+  }
+  .polygon:nth-of-type(6) {
+    /* transform: rotate(225deg) skewY(-45deg); */
+    background:green;
+  }
+  .polygon:nth-of-type(7) {
+    /* transform: rotate(270deg) skewY(-45deg); */
+    background:rgb(255, 159, 175);
+  }
+  .polygon:nth-of-type(8) {
+    /* transform: rotate(315deg) skewY(-45deg); */
     background:cyan;
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    border-radius:20%;
-    z-index:-1;
-    transform: rotate(-135deg);
-    right:10vw;
-    top:6vw;
-}
+  }
+ 

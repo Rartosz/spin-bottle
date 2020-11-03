@@ -3,7 +3,10 @@ let addPlayers8MaxBtn= document.querySelector(".add-classic");
 let delatePlayers8MaxBtn = document.querySelector(".delate-classic");
 let classicGameBtn = document.querySelector(".classic-game-btn");
 let startBtn = document.querySelector(".start-button");
-let spinScenery = document.querySelector(".spin-scenery");
+
+let circle = document.querySelector(".circle");
+
+let polygons = [...document.querySelectorAll(".polygon")];
 
 let addPlayers8Max = function() 
 {
@@ -38,6 +41,42 @@ let delatePlayers = function()
 
 
 
+let howManyParts = function() 
+{
+    let rotate = 360/players;
+    let adrotate = rotate;
+    let skew = 90 - rotate;
+
+    if(players>3)
+    {
+        for(let i=0; i<players; i++)
+    {
+        polygons[i].style.display="flex";
+      
+        polygons[i].style.transform = `rotate(${rotate}deg) skewY(${-1*skew}deg)`;
+         rotate=rotate+adrotate;
+        
+    }
+
+    }
+    else if(players==2)
+    {
+        let r=0;
+        
+        for(let i=0; i<2; i++)
+        {
+            polygons[i].style.display="flex";
+            polygons[i].style.transform = `rotate(${r}deg) skewY(${-1*r}deg)`;
+            polygons[i].style.transformOrigin = `0% 50%`;
+            polygons[i].style.width = "50%";
+            polygons[i].style.height = "100%";
+            r=180;
+        }
+    }
+    
+}
+
+
 
 
 addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
@@ -59,17 +98,7 @@ startBtn.addEventListener("click", function()
     addUsersClassic.style.display = "none";
     let classicSpin = document.querySelector(".classic-spin-container");
     classicSpin.style.display = "flex";
+
+    howManyParts();
 });
 
-spinScenery.addEventListener("click", function() 
-{
-    let bottle = document.querySelector(".bottle-spin");
-
-    bottle.classList.add("bottle-spin-animation-class");
-
-    setTimeout(function()
-    {
-        bottle.classList.remove("bottle-spin-animation-class");
-    },3100);
-    
-});
