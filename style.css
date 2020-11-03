@@ -1,0 +1,385 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+
+@font-face {
+    font-family: "Subway";
+    src: url("fonts/Subway-Black.ttf");
+    }
+
+body 
+{
+    background-color:rgba(51,195,229,1);
+    position:relative;
+    
+
+}
+
+.main-menu 
+{
+    position:absolute;
+    width:100vw;
+    overflow-y: auto;
+    background:transparent;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo 
+{
+    width:250px;
+    height:250px;
+    margin-bottom:10px;
+}
+
+.classic-game-btn
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+    border:4px solid white;
+    background-color:rgba(255,111,2,1);
+    font-family: 'Subway', serif;
+   
+    border-radius:15px;
+}
+
+.classic-game-btn:hover 
+{
+    opacity:0.7;
+    cursor: pointer;
+}
+h1 
+{
+    font-size:25px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding:8px 10px 5px 10px;
+}
+p1 
+{
+    font-size:20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding:0px 10px 10px 10px;
+}
+
+p3
+{
+    font-size:16px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    color:rgba(255, 255, 255, 0.89);
+    font-family: 'Subway';
+    margin-top:5px;
+}
+
+h2
+{
+    font-size:25px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding:8px 10px 5px 10px;
+}
+p2 
+{
+    font-size:20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding:0px 10px 10px 10px;
+}
+
+
+
+
+.add-users-classic
+{
+    width:100vw;
+    height: 100vh;
+    position:absolute;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+h3 
+{
+    color:rgba(255, 255, 255, 0.89);
+    font-family: 'Subway';
+    font-size:30px;
+    width:80vw;
+    text-align: center;
+
+}
+
+.add-container
+{
+    width:100%;
+    height:300px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.delate-classic 
+{
+    width:40px;
+    height:40px;
+    background:transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;  
+    border:none;
+}
+
+
+.del 
+{
+    content:" ";
+    position:absolute;
+    width:27px;
+    height:4px;
+    background:white;
+}
+.add-span
+{
+    content:" ";
+    position:absolute;
+    width:27px;
+    height:4px;
+    background:white;
+    transform: rotate(90deg);
+}
+
+.number-players 
+{
+    width:170px;
+    height:170px;
+    border-radius:100%;
+    background:white;
+    color:rgba(255,111,2,1);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:130px;
+    font-weight: 1000;
+}
+
+.add-classic 
+{
+    width:40px;
+    height:40px;
+    margin-left:10px;
+    border:none;
+    background:transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delate-classic:hover, .add-classic:hover 
+{
+    opacity:0.7;
+    cursor: pointer;
+}
+
+.start-button
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+    border:4px solid white;
+    background-color:	rgba(0, 192, 92,1);
+    font-family: 'Subway', serif;
+    font-size:30px;
+    width:170px;
+    height:60px;
+    text-align: center;
+   
+    border-radius:15px;
+}
+
+.start-button:hover 
+{
+    opacity:0.7;
+    cursor: pointer;
+}
+
+
+.classic-spin-container 
+{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spin-scenery 
+{
+    width:80vw;
+    height:80vw;
+    border:10px solid white;
+    border-radius:100%;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.result
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+    border:4px solid white;
+    background-color:	rgb(255, 0, 242);
+    font-family: 'Subway', serif;
+    font-size:30px;
+    width:180px;
+    height:53px;
+    text-align: center;
+   margin-top:50px;
+    border-radius:15px;
+    z-index:3;
+}
+
+.bottle-spin 
+{
+    position:absolute;
+    width:60%;
+    height:60%;
+    transform:rotate(45deg);
+}
+
+.bottle-spin-animation-class 
+{
+    animation:rotate 3s ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate 
+{
+    0%{transform: rotate(0deg);}
+    100%{transform:rotate(698deg);}
+}
+
+.red 
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:red;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    bottom:0;
+}
+.orange
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:orange;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(180deg);
+    top:0;
+}
+.yellow
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:yellow;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(90deg);
+    left:4vw;
+}
+.blue
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:blue;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(-90deg);
+    right:4vw;
+}
+
+.pink
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:pink;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(-45deg);
+    right:10vw;
+    bottom:6vw;
+}
+
+.green
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:green;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(45deg);
+    left:10vw;
+    bottom:6vw;
+}
+
+.purple
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:purple;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(135deg);
+    left:10vw;
+    top:6vw;
+}
+
+.cyan
+{
+    width:40%;
+    height:50%;
+    position:absolute;
+    background:cyan;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    border-radius:20%;
+    z-index:-1;
+    transform: rotate(-135deg);
+    right:10vw;
+    top:6vw;
+}
