@@ -455,3 +455,134 @@ justify-content: center;
   {
       margin:30px 0px;
   }
+
+
+  .random-game-container
+  {
+    width:100vw;
+    height:100vh;
+    position:relative;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .player-result
+  {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    width:fit-content;
+    height:60px;
+    min-height:60px;
+    
+    border:4px solid white;
+    border-radius:7px;
+    background-color:	rgb(255, 86, 0);
+    z-index:10000000000;
+    color:rgba(255, 255, 255, 0.89);
+    font-family: 'Subway';
+    font-size:35px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top:30px;
+    padding:0px 20px;
+  }
+
+  .circle-random
+{
+    position: relative;
+    border: 10px solid white;
+    padding: 0;
+display:flex;
+align-items: center;
+justify-content: center;
+    width: 140vw;
+    height: 140vw;
+    border-radius: 50%;
+    overflow: hidden;
+    transform:translateY(40%);
+    transition:3s;
+}
+@media only screen and (min-width: 1000px) {
+    .circle-random{
+        width: 80vh;
+        height: 80vh;
+    }
+  }
+
+  .polygon-random
+{
+    overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+  display:flex;
+  background:red;
+}
+
+.polygon-random:nth-of-type(1) {
+    background-color:red;
+    transform: rotate(0deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(2) {
+    background-color:orange;
+    transform: rotate(45deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(3) {
+    background-color:blue;
+    transform: rotate(90deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(4) {
+    background-color:yellow;
+    transform: rotate(135deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(5) {
+    background-color:purple;
+    transform: rotate(180deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(6) {
+    background-color:cyan;
+    transform: rotate(225deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(7) {
+    background-color:rgb(240, 138, 155);
+    transform: rotate(270deg) skewY(-45deg);
+  }
+  .polygon-random:nth-of-type(8) {
+    background-color:rgb(43, 255, 0);
+    transform: rotate(315deg) skewY(-45deg);
+  }
+
+  .draw 
+  {
+      position:absolute;
+      width:200px;
+      height:60px;
+      border:4px solid white;
+      border-radius:7px;
+      background:rgb(255, 107, 107);
+      transform: rotate(0deg);
+      z-index:10000000000;
+      color:rgba(255, 255, 255, 0.89);
+      font-family: 'Subway';
+      font-size:35px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: 2px;
+      padding:10px 10px;
+      transition:3s;
+  }
+
+  .draw:hover 
+  {
+      opacity:0.8;
+      cursor:pointer;
+  }
+

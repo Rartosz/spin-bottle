@@ -7,7 +7,10 @@ let circle = document.querySelector(".circle");
 let addPlayer = document.querySelector(".add-player");
 let polygons = [...document.querySelectorAll(".polygon")];
 let randomGameBtn = document.querySelector(".random-game");
+let startRandomBtn = document.querySelector(".start-random-game");
+let drawBtn = document.querySelector(".draw");
 let playersArray = [];
+let playersNames =[];
 
 let addPlayers8Max = function() 
 {
@@ -203,9 +206,30 @@ let delateFunction = setInterval(function()
     }
 },100);
 
+let addPlayersToArray = function()
+{
+    playersNames = [...document.querySelectorAll(".player-name")];
+
+    for(let i=0; i<playersNames.length; i++)
+    {
+        name = playersNames[i].value;
+        playersArray.push(name);
+    }
+
+}
+
+
+let drawFunction = function() 
+{
+    let circleRotate = Math.floor(Math.random() * 2500) + 120; 
+    let circleRandomGame = document.querySelector(".circle-random");
+    circleRandomGame.style.transform = `translateY(40%) rotate(${circleRotate}deg)`;
+    drawBtn.style.transform = `rotate(${-1*circleRotate}deg)`;
+}
+
+
+
 addPlayer.addEventListener("click", addPlayersRandom);
-
-
 addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
 delatePlayers8MaxBtn.addEventListener("click", delatePlayers);
 classicGameBtn.addEventListener("click", function() 
@@ -243,6 +267,21 @@ randomGameBtn.addEventListener("click", function()
     mainMenu.style.display = "none";
     let addPlayers = document.querySelector(".random-spin-container");
     addPlayers.style.display = "flex";
+});
+
+startRandomBtn.addEventListener("click",function()
+{
+    addPlayersToArray();
+    let addPlayers = document.querySelector(".random-spin-container");
+    addPlayers.style.display = "none";
+
+    let randomGameContainer = document.querySelector(".random-game-container");
+    randomGameContainer.style.display="flex";
+});
+
+drawBtn.addEventListener("click", function()
+{
+    drawFunction();
 });
 
 
