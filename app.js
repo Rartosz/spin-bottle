@@ -6,7 +6,7 @@ let startBtn = document.querySelector(".start-button");
 let circle = document.querySelector(".circle");
 let addPlayer = document.querySelector(".add-player");
 let polygons = [...document.querySelectorAll(".polygon")];
-
+let randomGameBtn = document.querySelector(".random-game");
 let playersArray = [];
 
 let addPlayers8Max = function() 
@@ -203,43 +203,50 @@ let delateFunction = setInterval(function()
     }
 },100);
 
-
-
-
-// addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
-// delatePlayers8MaxBtn.addEventListener("click", delatePlayers);
-// classicGameBtn.addEventListener("click", function() 
-// {
-//     let mainMenu = document.querySelector(".main-menu");
-//     let addUsersClassic = document.querySelector(".add-users-classic");
-//     mainMenu.style.display = "none";
-//     addUsersClassic.style.display = "flex";
-// });
-// startBtn.addEventListener("click", function() 
-// {
-//     let addUsersClassic = document.querySelector(".add-users-classic");
-//     addUsersClassic.style.display = "none";
-//     let classicSpin = document.querySelector(".classic-spin-container");
-//     classicSpin.style.display = "flex";
-//     howManyParts();
-// });
-// circle.addEventListener("click", function()
-// {
-//     let bottleRotate = Math.floor(Math.random() * 1800) + 0; 
-//     let bottle = document.querySelector(".bottle-spin");
-//     bottle.style.transform = `rotate(${bottleRotate}deg)`;
-//     let result = document.querySelector(".result");
-//     result.style.backgroundColor = "rgba(255,111,2,1)";
-//     result.textContent = "color...";
-//     setTimeout(function()
-//     {
-//         showEffect(bottleRotate);
-//     },3700);
-// });
-
 addPlayer.addEventListener("click", addPlayersRandom);
+
+
+addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
+delatePlayers8MaxBtn.addEventListener("click", delatePlayers);
+classicGameBtn.addEventListener("click", function() 
+{
+    let mainMenu = document.querySelector(".main-menu");
+    let addUsersClassic = document.querySelector(".add-users-classic");
+    mainMenu.style.display = "none";
+    addUsersClassic.style.display = "flex";
+});
+startBtn.addEventListener("click", function() 
+{
+    let addUsersClassic = document.querySelector(".add-users-classic");
+    addUsersClassic.style.display = "none";
+    let classicSpin = document.querySelector(".classic-spin-container");
+    classicSpin.style.display = "flex";
+    howManyParts();
+});
+circle.addEventListener("click", function()
+{
+    let bottleRotate = Math.floor(Math.random() * 1800) + 0; 
+    let bottle = document.querySelector(".bottle-spin");
+    bottle.style.transform = `rotate(${bottleRotate}deg)`;
+    let result = document.querySelector(".result");
+    result.style.backgroundColor = "rgba(255,111,2,1)";
+    result.textContent = "color...";
+    setTimeout(function()
+    {
+        showEffect(bottleRotate);
+    },3700);
+});
+
+randomGameBtn.addEventListener("click", function()
+{
+    let mainMenu = document.querySelector(".main-menu");
+    mainMenu.style.display = "none";
+    let addPlayers = document.querySelector(".random-spin-container");
+    addPlayers.style.display = "flex";
+});
+
+
 
 
     
 
-delateFunction();
