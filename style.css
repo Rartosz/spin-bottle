@@ -577,7 +577,7 @@ justify-content: center;
       text-align: center;
       letter-spacing: 2px;
       padding:10px 10px;
-      transition:3s;
+      transition:transform 3s;
   }
 
   .draw:hover 
