@@ -4,8 +4,10 @@ let delatePlayers8MaxBtn = document.querySelector(".delate-classic");
 let classicGameBtn = document.querySelector(".classic-game-btn");
 let startBtn = document.querySelector(".start-button");
 let circle = document.querySelector(".circle");
-
+let addPlayer = document.querySelector(".add-player");
 let polygons = [...document.querySelectorAll(".polygon")];
+
+let playersArray = [];
 
 let addPlayers8Max = function() 
 {
@@ -156,38 +158,92 @@ let showEffect = function(bottleRotate)
 
 }
 
-
-
-
-
-
-addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
-delatePlayers8MaxBtn.addEventListener("click", delatePlayers);
-classicGameBtn.addEventListener("click", function() 
+let addPlayersRandom = function() 
 {
-    let mainMenu = document.querySelector(".main-menu");
-    let addUsersClassic = document.querySelector(".add-users-classic");
-    mainMenu.style.display = "none";
-    addUsersClassic.style.display = "flex";
-});
-startBtn.addEventListener("click", function() 
+    let screen = document.querySelector(".container");
+
+    let playerContainer = document.createElement("div");
+    playerContainer.classList.add("player-container");
+    screen.appendChild(playerContainer);
+    
+    let playerInput = document.createElement("input");
+    playerInput.classList.add("player-name");
+    playerInput.placeholder = "Name...";
+    playerContainer.appendChild(playerInput);
+
+    let editBtn = document.createElement("button");
+    editBtn.classList.add("edit");
+    playerContainer.appendChild(editBtn);
+
+    let delateBtn = document.createElement("button");
+    delateBtn.classList.add("delate-player");
+    playerContainer.appendChild(delateBtn);
+
+    let spanOne = document.createElement("span");
+    delateBtn.appendChild(spanOne);
+    spanOne.classList.add("del-span");
+
+    let spanTwo = document.createElement("span");
+    delateBtn.appendChild(spanTwo);
+    spanTwo.classList.add("del-span");
+    spanTwo.classList.add("span-two");
+
+    
+
+    
+}
+
+
+let delateFunction = setInterval(function()
 {
-    let addUsersClassic = document.querySelector(".add-users-classic");
-    addUsersClassic.style.display = "none";
-    let classicSpin = document.querySelector(".classic-spin-container");
-    classicSpin.style.display = "flex";
-    howManyParts();
-});
-circle.addEventListener("click", function()
-{
-    let bottleRotate = Math.floor(Math.random() * 1800) + 0; 
-    let bottle = document.querySelector(".bottle-spin");
-    bottle.style.transform = `rotate(${bottleRotate}deg)`;
-    let result = document.querySelector(".result");
-    result.style.backgroundColor = "rgba(255,111,2,1)";
-    result.textContent = "color...";
-    setTimeout(function()
+    let del = [...document.querySelectorAll(".delate-player")];
+    let cont = [...document.querySelectorAll(".player-container")];
+    for(let i=0; i<del.length; i++)
     {
-        showEffect(bottleRotate);
-    },3700);
-});
+    del[i].addEventListener("click", function()
+    {
+        cont[i].remove();
+    });
+    }
+},100);
+
+
+
+
+// addPlayers8MaxBtn.addEventListener("click", addPlayers8Max);
+// delatePlayers8MaxBtn.addEventListener("click", delatePlayers);
+// classicGameBtn.addEventListener("click", function() 
+// {
+//     let mainMenu = document.querySelector(".main-menu");
+//     let addUsersClassic = document.querySelector(".add-users-classic");
+//     mainMenu.style.display = "none";
+//     addUsersClassic.style.display = "flex";
+// });
+// startBtn.addEventListener("click", function() 
+// {
+//     let addUsersClassic = document.querySelector(".add-users-classic");
+//     addUsersClassic.style.display = "none";
+//     let classicSpin = document.querySelector(".classic-spin-container");
+//     classicSpin.style.display = "flex";
+//     howManyParts();
+// });
+// circle.addEventListener("click", function()
+// {
+//     let bottleRotate = Math.floor(Math.random() * 1800) + 0; 
+//     let bottle = document.querySelector(".bottle-spin");
+//     bottle.style.transform = `rotate(${bottleRotate}deg)`;
+//     let result = document.querySelector(".result");
+//     result.style.backgroundColor = "rgba(255,111,2,1)";
+//     result.textContent = "color...";
+//     setTimeout(function()
+//     {
+//         showEffect(bottleRotate);
+//     },3700);
+// });
+
+addPlayer.addEventListener("click", addPlayersRandom);
+
+
+    
+
+delateFunction();
