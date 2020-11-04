@@ -221,7 +221,7 @@ let addPlayersToArray = function()
 
 let drawFunction = function() 
 {
-    let circleRotate = Math.floor(Math.random() * 2500) + 120; 
+    let circleRotate = Math.floor(Math.random() * 2500) + 380; 
     let circleRandomGame = document.querySelector(".circle-random");
     circleRandomGame.style.transform = `translateY(40%) rotate(${circleRotate}deg)`;
     drawBtn.style.transform = `rotate(${-1*circleRotate}deg)`;
