@@ -274,7 +274,7 @@ startBtn.addEventListener("click", function()
 });
 circle.addEventListener("click", function()
 {
-    let bottleRotate = Math.floor(Math.random() * 1800) + 0; 
+    let bottleRotate = Math.floor(Math.random() * 1800) + 270; 
     let bottle = document.querySelector(".bottle-spin");
     bottle.style.transform = `rotate(${bottleRotate}deg)`;
     let result = document.querySelector(".result");
