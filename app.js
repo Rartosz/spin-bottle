@@ -229,10 +229,26 @@ let drawFunction = function()
 
     let temp = Math.floor(Math.random()* (playersArray.length));
     let playerDraw = document.querySelector(".player-result");
-    playerDraw.textContent = "draw...";
-    
+
+    let i=0;
+    let namesAnimation = setInterval(function()
+    {
+        
+        if(i==playersArray.length)
+        {
+            i=0;
+            playerDraw.textContent = playersArray[i];
+        }
+        else{
+            playerDraw.textContent = playersArray[i];
+            i++;
+        }
+        
+    },100);
+
     setTimeout(function(){
-        playerDraw.textContent = playersArray[temp];
+        clearInterval(namesAnimation);
+        playerDraw.textContent = playersArray[temp]; 
     },3000);
 }
 
