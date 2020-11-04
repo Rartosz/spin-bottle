@@ -171,10 +171,6 @@ let addPlayersRandom = function()
     playerInput.placeholder = "Name...";
     playerContainer.appendChild(playerInput);
 
-    let editBtn = document.createElement("button");
-    editBtn.classList.add("edit");
-    playerContainer.appendChild(editBtn);
-
     let delateBtn = document.createElement("button");
     delateBtn.classList.add("delate-player");
     playerContainer.appendChild(delateBtn);
