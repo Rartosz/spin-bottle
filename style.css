@@ -251,7 +251,7 @@ justify-content: center;
     justify-content: center;
     color:rgb(255, 255, 255);
     border:4px solid white;
-    background-color:	rgb(255, 0, 242);
+    background-color:rgba(255,111,2,1);
     font-family: 'Subway', serif;
     font-size:30px;
     width:180px;
@@ -268,7 +268,12 @@ justify-content: center;
     width:60%;
     height:60%;
    z-index:1000;
-   transform:rotate(45deg);
+   transition:4s;
+}
+
+.bottle-spin-class 
+{
+    transition:4s;
 }
 
 .polygon 
@@ -284,37 +289,27 @@ justify-content: center;
 }
 
 .polygon:nth-of-type(1) {
-    /* transform: rotate(0deg) skewY(-0deg); */
-    background:red;
-    /* display:flex; */
+    background-color:red;
   }
   .polygon:nth-of-type(2) {
-    /* transform: rotate(180deg) skewY(-180deg); */
-    background:orange;
-    /* display:flex; */
+    background-color:orange;
   }
   .polygon:nth-of-type(3) {
-    /* transform: rotate(90deg) skewY(-45deg); */
-    background:blue;
+    background-color:blue;
   }
   .polygon:nth-of-type(4) {
-    /* transform: rotate(135deg) skewY(-45deg); */
-    background:yellow;
+    background-color:yellow;
   }
   .polygon:nth-of-type(5) {
-    /* transform: rotate(180deg) skewY(-45deg); */
-    background:purple;
+    background-color:purple;
   }
   .polygon:nth-of-type(6) {
-    /* transform: rotate(225deg) skewY(-45deg); */
-    background:green;
+    background-color:green;
   }
   .polygon:nth-of-type(7) {
-    /* transform: rotate(270deg) skewY(-45deg); */
-    background:rgb(255, 159, 175);
+    background-color:pink;
   }
   .polygon:nth-of-type(8) {
-    /* transform: rotate(315deg) skewY(-45deg); */
-    background:cyan;
+    background-color:cyan;
   }
  
