@@ -225,6 +225,15 @@ let drawFunction = function()
     let circleRandomGame = document.querySelector(".circle-random");
     circleRandomGame.style.transform = `translateY(40%) rotate(${circleRotate}deg)`;
     drawBtn.style.transform = `rotate(${-1*circleRotate}deg)`;
+
+
+    let temp = Math.floor(Math.random()* (playersArray.length));
+    let playerDraw = document.querySelector(".player-result");
+    playerDraw.textContent = "draw...";
+    
+    setTimeout(function(){
+        playerDraw.textContent = playersArray[temp];
+    },3000);
 }
 
 
