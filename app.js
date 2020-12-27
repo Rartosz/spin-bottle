@@ -12,6 +12,8 @@ let drawBtn = document.querySelector(".draw");
 let playersArray = [];
 let playersNames =[];
 
+let backBtn = [...document.querySelectorAll(".back-btn")];
+
 let addPlayers8Max = function() 
 {
     if(players==8)
@@ -47,6 +49,19 @@ let delatePlayers = function()
 
 let howManyParts = function() 
 {
+
+    for(let i=0; i<polygons.length; i++)
+    {
+        polygons[i].style.display="none";
+        polygons[i].style.transform = `rotate(0deg) skewY(0deg)`;
+            polygons[i].style.width = "50%";
+            polygons[i].style.height = "50%";
+            polygons[i].style.top = "0";
+            polygons[i].style.right = "0";
+            polygons[i].style.transformOrigin = `0% 100%`;
+    }
+
+
     let rotate = 360/players;
     let adrotate = rotate;
     let skew = 90 - rotate;
@@ -310,7 +325,50 @@ drawBtn.addEventListener("click", function()
 });
 
 
+backBtn[0].addEventListener("click", function()
+{
+    let menu = document.querySelector(".main-menu");
+    let classicAdd = document.querySelector(".add-users-classic");
 
+
+    classicAdd.style.display="none";
+    menu.style.display="flex";
+});
+
+backBtn[1].addEventListener("click", function()
+{
+    let classicGame = document.querySelector(".classic-spin-container");
+    let classicAdd = document.querySelector(".add-users-classic");
+
+    classicGame.style.display = "none";
+    
+    classicAdd.style.display="flex";
+  
+});
+
+
+backBtn[2].addEventListener("click", function()
+{
+    let menu = document.querySelector(".main-menu");
+    let randomAdd = document.querySelector(".random-spin-container");
+
+
+    randomAdd.style.display="none";
+    menu.style.display="flex";
+});
+
+
+backBtn[3].addEventListener("click", function()
+{
+   
+    let randomGame = document.querySelector(".random-game-container");
+    let randomAdd = document.querySelector(".random-spin-container");
+    
+    playersArray = [];
+
+    randomAdd.style.display="flex";
+    randomGame.style.display="none";
+});
 
     
 

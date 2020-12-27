@@ -586,3 +586,17 @@ justify-content: center;
       cursor:pointer;
   }
 
+.back-btn 
+{
+  position:absolute;
+  top:10px;
+  left:20px;
+  font-size:18px;
+  padding:5px 10px;
+  background-color:	rgb(255, 86, 0);
+  color:white;
+  border:3px solid white;
+  border-radius:20px;
+  font-family: "Subway";
+
+}
