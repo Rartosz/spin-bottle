@@ -295,9 +295,11 @@ circle.addEventListener("click", function()
     let result = document.querySelector(".result");
     result.style.backgroundColor = "rgba(255,111,2,1)";
     result.textContent = "color...";
+    circle.style.pointerEvents = "none"
     setTimeout(function()
     {
         showEffect(bottleRotate);
+        circle.style.pointerEvents = "auto"
     },3700);
 });
 
@@ -322,6 +324,11 @@ startRandomBtn.addEventListener("click",function()
 drawBtn.addEventListener("click", function()
 {
     drawFunction();
+    drawBtn.style.pointerEvents = "none";
+    setTimeout(function()
+    {
+        drawBtn.style.pointerEvents = "auto";
+    },3000);
 });
 
 
